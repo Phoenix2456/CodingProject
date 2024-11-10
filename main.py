@@ -21,7 +21,17 @@ def main():
     # Level 1
     # This function places each ships by their sizes
     print("\n Ship Sizes:")
+    
     for ship in db.incoming_ships:
+    
+
+        
+    
+    # Level 4 
+
+
+    # Bonus
+
 
 
         
