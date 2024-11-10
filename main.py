@@ -22,10 +22,10 @@ def main():
     # This function places each ships by their sizes
     print("\n Ship Sizes:")
     for ship in db.incoming_ships:
-        # Ships with small sizes 
-        # small = []
-        # ship[0]['small'] = [f"\n Ship: {ship['ship_name']}, size: {ship['size']}"]
-        print(f"\n Ship: {ship['ship_name']}, size: {ship['size']}")
+
+
+        
+        
     
 
     # TODO: Implement the docking scheduler logic here
