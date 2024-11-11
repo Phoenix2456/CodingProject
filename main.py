@@ -23,15 +23,34 @@ def main():
     print("\nSchedule Bays By Sizes: ")
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
-            if ship['size'] == bay['size']: # 
+            if ship['size'] == bay['size']: 
                 print(f"Bay {bay['bay_id']}: {ship['ship_name']} - {bay['size']}")
     # Level 2
     # This function will create a schedule a list of bays available by time 
-    print("\nShips Available Time: ")
+    print("\nSchedule Bays By Time: ")
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
-            if ship['arrival_time'] or ['departure_time'] == bay['schedule']:
+            if ship['arrival_time'] and ['departure_time'] == bay['schedule']:
                 print(f"Bay {bay['bay_id']}: {ship['ship_name']}, Arrival Time: {ship['arrival_time']}; Departure Time: {ship['departure_time']}")
+                # The code placed the ships in the wrong bay but right time
+    # Level 3
+    # This function is creating a schedule of bays based on sizes and time without conflicts
+    print("\nSchedule Bays By Size And Time: ")
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+           if ship['arrival_time'] or ['departure_time'] and ['size'] == bay['schedule'] and ['size']:
+                print(f"Bay {bay['bay_id']}: {ship['ship_name']} - {bay['size']}. Arrival Time: {ship['arrival_time']}; Departure Time: {ship['departure_time']}") 
+                # The code placed the ships in the wrong bay but right time
+    # Level 4
+    # 
+
+
+    # Bonus 
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+            if ship['size'] == bay['size']: # 
+                print(f"Bay {bay['bay_id']}: {ship['ship_name']} - 12:00 PM to 14:00 PM")
+
 
          
     
