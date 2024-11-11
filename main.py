@@ -18,7 +18,16 @@ def print_incoming_ships():
 def main():
     print_docking_bays()
     print_incoming_ships()
+    # Level 1
+    # This function places each ships in the right bay by size
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+            if ship['size'] == bay['size']:
+                print(f"Bay {bay['bay_id']}: {ship['ship_name']} - {bay['size']}")
+
+         
     
+
     # TODO: Implement the docking scheduler logic here
     # Levels 1 to 4 and the bonus can be implemented below
 
