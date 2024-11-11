@@ -20,10 +20,18 @@ def main():
     print_incoming_ships()
     # Level 1
     # This function places each ships in the right bay by size
+    print("\nSchedule Bays By Sizes: ")
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
-            if ship['size'] == bay['size']:
+            if ship['size'] == bay['size']: # 
                 print(f"Bay {bay['bay_id']}: {ship['ship_name']} - {bay['size']}")
+    # Level 2
+    # This function will create a schedule a list of bays available by time 
+    print("\nShips Available Time: ")
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+            if ship['arrival_time'] or ['departure_time'] == bay['schedule']:
+                print(f"Bay {bay['bay_id']}: {ship['ship_name']}, Arrival Time: {ship['arrival_time']}; Departure Time: {ship['departure_time']}")
 
          
     
